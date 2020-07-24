@@ -27,3 +27,5 @@ The Morse code is transmitted via the LED for detection by the photocell of the 
         9 - To toggle the LED being permanently ON
 
   grmccormack@googlemail.com
+  
+  https://youtu.be/zY6HWqG2hSY 
