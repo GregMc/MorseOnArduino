@@ -24,6 +24,7 @@ The Morse code is transmitted via the LED for detection by the photocell of the 
         7 - To Halve  TickerTape Speed
         8 - To Double TickerTape Speed
         9 - To toggle the LED being permanently ON
+        
 
   grmccormack@googlemail.com
   
