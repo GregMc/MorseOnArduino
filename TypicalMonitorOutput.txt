@@ -1,0 +1,11 @@
+AutoTuning ... 
+
+===   Morse Code Transmitter & Receiver  ( Solo  or  One of a pair )   ===
+  0-4 ReportLvl & 0 is also AutoTune,
+  5-TickTapeOFF immediately,
+  6-TickTapeOFF at end of message OR Restart, 
+  7-Slower, 8-Faster, 9-LED ON
+TT_Period : 80   DOT  : 81   DASH : 161   ReportLvl : 0   
+
+CK BROWN FOX JUMPED OVER THE LAZY DOG
+THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG
