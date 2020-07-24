@@ -19,7 +19,7 @@
      ( If the Tapper has been pressed in the last 10 seconds then the Morse
        receiver goes into Tapper Mode and starts to expect slower DOTS and DASHES
        In Tapper Mode if the last letter of the word FOX is received - it restarts TickerTape
-  OR Press 6 to set the LED to permanently ON then
+  OR Press 9 to set the LED to permanently ON then
      use your finger or an object to block the LED light getting to the photocell
      thus creating Morse ( in reverse )
   
@@ -40,7 +40,8 @@
 
   grmccormack@googlemail.com - July 2020
   
-  http://www
+  https://youtu.be/zY6HWqG2hSY
+  https://github.com/GregMc/MorseOnArduino
 */
 
 //const int OnBoardLED  = 13 ;
