@@ -6,9 +6,8 @@ The Morse code is transmitted via the LED for detection by the photocell of the 
   OR Press 5 or 6 to turn OFF TickerTape then
      Tap out your morse using the Tapper on the breadboard
      In Tapper Mode if the last letter of the word FOX is received - it restarts TickerTape
-  OR Press 6 to set the LED to permanently ON then
-     use your finger or an object to block the LED light getting to the photocell
-     thus creating Morse ( in reverse )
+  OR Press 9 to set the LED to permanently ON then
+     use your finger or an object to block the LED light getting to the photocell thus creating Morse ( in reverse )
   
   Use ONE   space  between Letters
   and TWO   spaces between Words 
