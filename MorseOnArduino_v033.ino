@@ -1,9 +1,9 @@
 /*
   Morse Coder ( for the Arduino )
 
-  ╔═══════════════════════════════════════════╗
+  ╔══════════════════════════════════════════════════════════════════════╗
   ║  Morse Code  Transmitter & Receiver   ( Solo  or  One of a pair )    ║
-  ╚═══════════════════════════════════════════╝
+  ╚══════════════════════════════════════════════════════════════════════╝
   
   The Morse code is transmitted via the LED for detection by the photocell of the
   recipient ( might be the same device - if the LED is shining back into the photocell )
