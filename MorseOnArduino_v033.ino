@@ -58,8 +58,8 @@ unsigned int DOTH_Count = 0 ; //    AutoTuning = DOTH is a candidate for a DOT o
 float fTemp1 , fTemp2 ;
 
 int TT_Period  = 80 ; // Ticker Tape Scan Period
-int DotTime  = 10 ; // Photocell values are calculated ( first ten incoming DOTHs )
-int DashTime = 20 ;
+int DotTime    = 10 ; // values are calculated ( from first ten incoming DOTHs )
+int DashTime   = 20 ;
 
 int rTime1 , rTime2 , rTime3 , rTime4 , rTime5 , rTime6 , rTime7 ;
 
@@ -171,9 +171,7 @@ void ReadPhotocell() {
       float NowMinusFallE = now - FallEdge ; 
       // =========== Dip was considered long enough to be a 'space' thus indicating the completion of a letter =====
       fTemp1 = float(DashTime) ; fTemp2 = fTemp1 / 5.0 ;
-//      if ((NowMinusFallE > ( fTemp1 - fTemp2 )) && ( NowMinusFallE < ( fTemp1 + fTemp2 ))) {
       if (NowMinusFallE > ( fTemp1 - fTemp2 )) {
-//        Serial.println(StrngDD) ;
         sTemp = Morse2Alpha(StrngDD) ; StrngDD = "" ;
         Message0(sTemp) ;
         Message(2,Detected+" LETTER : " , NowMinusFallE,sTemp) ;
@@ -261,8 +259,6 @@ void ReadPhotocell() {
 void ReadSerial() {
   // ============ Read Serial from PC ==============
   // If a Carriage Return OR LineFeed is detected then convert that to a space
-  // **************** Should perhaps be a double space **********
-  //  This needs developing as at the moment it just Prints to the screen 
   int RecvdByte = 0;   // for Recvd serial data
   while (Serial.available() > 0) {
     RecvdByte = toUpperCase(char(Serial.read()));
@@ -357,7 +353,6 @@ int Transmit(String Source, int i_Owner) {
 
 
 void loop() {
-//  int Sys2Counter = 0 ;
   if ( SysCounter == 1 ) {  ReadPhotocell() ;} // Read the Photocell
   if ( SysCounter == 2 ) {  ReadSerial()    ;} // Read the Serial Port ( PC )
   SysCounter += 1 ;  if ( SysCounter >= 3 ) { SysCounter = 1 ; } // Sys2Counter ++ }
@@ -369,22 +364,17 @@ void loop() {
   }
   iTemp = (iLED * (iOwner != 3) ) + (LED_On * 2) ;
   if ( digitalRead(7)) { iTemp = 2 ; } // MorseTapper
-
-  test1("dummy") ;
-
   if ( iTemp > 1 ) { iTemp = 255 ;} else { iTemp = 0; }
-//  iTemp = ((iLED + LED_On * 2 + digitalRead(MorseTapper)) > 1) * 255 ;
   analogWrite(9, iTemp) ; // LED to Send Morse
+  //  test1("dummy") ;
 }
 
 
 
 void test1(String Strng9 )
-//void test(int i, int j , int k )
   { bTemp = digitalRead(6) ; // Test Pushbutton
   if ( bTemp && ( bTest_1 == false )) { 
      Serial.println(String(iOwner,DEC)+" "+String(iLED,DEC)+" "+String(iTemp,DEC)+" "+String(DOTH_Count,DEC)) ;
-//    Serial.print("  1=" + String(i,DEC) + "  2=" + String(j,DEC) + "  3=" + String(k,DEC) + "/n");
     }
   bTest_1 = bTemp ;
   }
@@ -393,8 +383,6 @@ void test2(String Strng9 )
   { bTemp = digitalRead(6) ; // Test Pushbutton
   if ( bTemp && ( bTest_2 == false )) { 
      Serial.println(" iOwner = " + String(iOwner,DEC) + "   RecvdStrng = " + RecvdStrng ) ;
-//     Serial.println("GetMorseDD('G') = "+GetMorseDD('G') );
-//     Serial.println(" GetMorse01('.-.') = " + GetMorse01(".-.")) ;
     }
   bTest_2 = bTemp ;
   }
