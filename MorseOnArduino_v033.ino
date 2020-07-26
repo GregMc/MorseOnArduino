@@ -14,11 +14,7 @@
   In the INPUT section of the monitor :-
      Type in your sentence 'HOW ARE YOU'     which will get converted to Morse Code
      and transmitted at the end of the current TickerTape message 
-  OR Press 5 to turn off TickerTape then
-     Tap out your morse using the Tapper on the breadboard
-     ( If the Tapper has been pressed in the last 10 seconds then the Morse
-       receiver goes into Tapper Mode and starts to expect slower DOTS and DASHES
-       In Tapper Mode if the last letter of the word FOX is received - it restarts TickerTape
+  OR Tap out your morse using the Tapper on the breadboard
   OR Press 9 to set the LED to permanently ON then
      use your finger or an object to block the LED light getting to the photocell
      thus creating Morse ( in reverse )
